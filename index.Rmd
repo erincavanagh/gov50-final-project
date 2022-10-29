@@ -1,7 +1,7 @@
 ---
-title: "Health Status Affected by Environmental Harms"
+title: "Economic Shocks and Civil War"
 author: "Erin Cavanagh"
-description: "Observing the possible relationship between an individual's liklihood of developing specified illnesses to the distance from power plants and other sources of pollution"
+description: "Observing the possible relationship between economic shocks to a state' oil market and the liklihood of civil war"
 output:
   distill::distill_article:
     self_contained: false
@@ -11,11 +11,25 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to the impact that environmental hazards have on the health of the population. I plan of stydying tis relationship by observing the possible relationship between an individual's likelihood of receiving a diagnosis of a specified disease (most likely a respiratory disorder) and their relative distance to a power plant that emits pollution. The control group will consist of individuals who reside in an area with no power plants. 
+Research Question: Are countries that suffer from economic shocks more at risk for civil war outbreaks?
+
+Hypothesis: The grievance of Economic shocks to sovereign states leads to the increased likelihood of a civil war conflict. 
+
+Theory: Civil Wars are often the result of collective grievances that motivate a group to rebel. In the wake of economic shocks, people suffer from financial constraints and the continuation of labor under these circumstances appears less attractive. If a change in production lowers wages in an area, the opportunity cost of joining rebel groups is lowered (so long as the individual believes that there will be a gain in doing so). Furthermore, an increase in prices– specifically those of the oil market– can lead to rapacity and violence. Thus, states that depend on the exportation of oil for a portion of their GDP will be more sensitive to the effects of economic shocks on internal conflicts. While there are confounding variables (mountainous terrain, varying state capacities, etc.) I expect to see a relationship between economic shocks and the outbreak of civil war. 
+
+Explanatory Variable: I plan on using the variables that represent the countries oil exportation and GDP as the variables to be manipulated. I will use data from multiple nations and compare the likelihood of civil war as the production and exportation of oil changes. 
+
+Outcome Variable: the outcome variable is the presence of civil conflicts within a nation. The data set includes variables that show the year a civil war started in the country, as well as variables that tell if there is a civil war in the current year or the previous year. 
+
+Observed Patterns: I am looking to see a relationship between a change in the oil exportation (or percentage of the GDP that comes from oil production) and the onset of civil war. In a regression model, I expect that a major shift would result in a civil conflict beginning soon after (models show that civil wars would be the result of both increases and decreases to the price of oil due to opportunity costs and rapacity. I would need to do further research to decide which model I will be using to assess the data.)
+
 
 To investigate this relationship, I will begin by researching the following databases:
 
-1. https://catalog.data.gov/dataset/census-and-facility-emissions-dataset
+1.https://www.dropbox.com/s/gde30hr9yokqku5/civilwar.csv?dl=0
+
+ civilwar.csv  
+
 
 
 
