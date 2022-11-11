@@ -26,9 +26,27 @@ Observed Patterns: I am looking to see a relationship between a change in the oi
 
 To investigate this relationship, I will begin by researching the following databases:
 
-1.https://www.dropbox.com/s/gde30hr9yokqku5/civilwar.csv?dl=0
+1.  https://www.dropbox.com/s/gde30hr9yokqku5/civilwar.csv?dl=0 
 
- civilwar.csv  
+ 
+```{r}
+library(readr)
+library(tidyverse)
+
+civilwar <- read_csv("civilwar.csv")
+civilwar
+cor(civilwar$lngdp_, civilwar$warsa, use = "pairwise")
+
+oil_war_plot <- civilwar|>
+  group_by(nafrme)|>
+  ggplot(aes(x= lngdp_, y= warsa))+
+  geom_smooth(method ="loess", se = TRUE, size= 1.1)+
+  labs(title = "Log of GDP per capita and Civil War in the Middle East", x= "Log per capita Income", y ="Onset of Civil War (in 5 year period)")
+
+oil_war_plot
+  
+
+```
 
 
 
