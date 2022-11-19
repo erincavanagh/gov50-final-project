@@ -1569,9 +1569,36 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span></span>
 <span><span class='va'>oil_war_plot</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+<img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>treat_means</span> <span class='op'>&lt;-</span> <span class='va'>civilwar</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>warsa</span><span class='op'>==</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>trt_gdpmean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>lngdp_</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>treat_means</span></span></code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<pre><code># A tibble: 1 × 1
+  trt_gdpmean
+        &lt;dbl&gt;
+1        7.08</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>control_means</span> <span class='op'>&lt;-</span> <span class='va'>civilwar</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>warsa</span><span class='op'>==</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span> congdpmean<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>lngdp_</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>control_means</span></span></code></pre>
+</div>
+<pre><code># A tibble: 1 × 1
+  congdpmean
+       &lt;dbl&gt;
+1       7.82</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span> <span class='va'>ate</span> <span class='op'>&lt;-</span> <span class='va'>treat_means</span> <span class='op'>-</span> <span class='va'>control_means</span></span>
+<span>  <span class='va'>ate</span></span></code></pre>
+</div>
+<pre><code>  trt_gdpmean
+1  -0.7385899</code></pre>
+</div>
+<p>The graph shows the relationshiop between economic spikes (in this cse, changes in the gdp per capita) and the onset of civil war. the graph shows a realtionship, albeit not a strong one. The ate shows the average effect of the economic spikes on the onset war.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
