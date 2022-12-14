@@ -8,12 +8,10 @@ output:
 ---
 
 
-
 ## Project thoughts
 
 
-
-
+ 
 INTRODUCTION
 
   Civil wars are often the result of commitment problems between the state and a subgroup that has strong motivation to impose their will onto another faction. The cost of a civil war is high to each group involved, and the potential benefit to be gained by the victorious faction must outweigh the costs that will be imposed by the enemy. A possible motive for a group to initiate a civil conflict is the greed and grievance that accompanies economic shocks. If greed was the primary motivation, a portion of the country's population would be incentivized by the potential of control and material gains. Additionally, such greed could be paired a motivation to redress sociopolitical issues that have caused the group grievances (poor labor conditions, high unemployment, etc.) This work aims to discover if countries that suffer from economic shocks are more at risk for civil war outbreaks. More specifically, the work it tests the hypothesis that negative economic shocks to sovereign states leads to the increased likelihood of a civil war conflict in countries. 
@@ -114,10 +112,9 @@ econ_effect
 modelsummary::modelsummary(econ_effect,
                            statistic = c("s.e. = {std.error}", 
                                          "p = {p.value}"),
-                           gof_map = c("nobs", "r.squared", "adj.r.squared"))
+                           gof_map = c("nobs", "r.squared", "adj.r.squared"))   
 ```
-
-
+     
 
 CONCLUSION
 
